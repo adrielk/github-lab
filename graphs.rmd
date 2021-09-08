@@ -1,0 +1,16 @@
+---
+title: "hello"
+output: html_document
+---
+
+
+```{r}
+library(tidyverse)
+```
+
+```{r}
+movie_data <- read_csv('movie_metadata.csv')
+head(movie_data)
+# print(colnames(movie_data))
+# print(mean(movie_data$imdb_score))
+```
