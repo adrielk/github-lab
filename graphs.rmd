@@ -11,4 +11,9 @@ library(tidyverse)
 ```{r}
 movie_data <- read_csv('movie_metadata.csv')
 head(movie_data)
+grouped = group_by(movie_data, language)
+summary = summarize(grouped, count=n())
+p<-ggplot(data=summary, aes(x=language, y=count)) +
+  geom_bar(stat="identity")
+p
 ```
